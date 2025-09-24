@@ -1,0 +1,77 @@
+---
+title: "Sesión 1 - Operadores y Funciones en R"
+output: html_document
+---
+
+# ---- SESION 1 ----
+
+## ---- OPERADORES LÓGICOS ----
+```{r}
+17 < 5
+17 > 5
+17 <= 5
+17 >= 5
+
+17 != 5
+17 == 5
+```
+
+## ---- OPERADORES ARITMÉTICOS ----
+```{r}
+17 + 5
+17 - 5
+17 * 5
+17 / 5
+17 ^ 5
+17 %/% 5
+17 %% 5
+```
+
+## ---- LOGARITMOS Y EXPONENCIALES ----
+```{r}
+log(1)
+log(12)
+log(12, 2)
+exp(12)
+exp(1)
+```
+
+## ---- FUNCIONES TRIGONOMÉTRICAS ----
+```{r}
+sin(45)
+cos(45)
+tan(45)
+asin(0.96)
+acos(0.97)
+atan(0.45)
+```
+
+## ---- FUNCIONES VARIAS ----
+```{r}
+abs(-34)
+sqrt(8)
+floor(1.56)
+ceiling(1.56)
+max(4, 7, 2, 12)
+min(4, 7, 2, 12)
+sign(-45)
+```
+
+## ---- EJERCICIOS DE PRÁCTICA ----
+```{r}
+cos(pi/6 + pi/2) + exp(2)
+cos(pi/6 + pi/2) + exp(2) * log(5) + acos(1/sqrt(2))
+
+1/7
+options(digits=3); 1/7
+options(digits=6); 1/7
+round(67.45)
+round(75.324568, 2)
+options(digits=7)
+signif(56.345458234234, 2)
+signif(56.345458234234)
+exp(-30)
+options(scipen=999)
+exp(-30)
+options(scipen=0)
+```
