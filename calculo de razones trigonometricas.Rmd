@@ -1,0 +1,97 @@
+---
+title: "Cálculo de razones trigonométricas"
+author: "maria de jesus juarez martinez"
+date: "2025-09-26"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Discriminante
+
+```{r}
+# Variables
+a <- 1
+b <- 2
+c <- 3
+
+# Calculo del discriminante
+raiz2 <- b^2 - 4*a*c
+disc <- abs(raiz2)
+
+texto <- "El valor del discriminante es:"
+cat(texto, raiz2)
+```
+
+## Uso de paste()
+
+```{r}
+paste(texto, disc)
+paste0(texto, disc)
+```
+
+## Ejemplo con x0 y x1
+
+```{r}
+x0 <- 1
+x1 <- x0 - pi * x0 + 1
+
+# Imprimir valores
+print(x1)
+print(x1^2)
+print(x1^3)
+```
+
+## Mensaje personalizado
+
+```{r}
+texto1 <- "El valor de"
+texto2 <- "al cuadrado es:"
+paste(texto1, x1, texto2, x1^2)
+```
+
+
+
+triangulo rectangulo
+```{r}
+# Lados del triángulo
+a <- 3   # cateto opuesto al ángulo α
+b <- 4   # cateto adyacente al ángulo α
+c <- 5   # hipotenusa
+
+# Ángulos en radianes (opcional si se desea usar funciones trigonométricas inversas)
+# alpha <- asin(a/c)
+# beta  <- acos(a/c)
+# gamma <- pi/2  # En un triángulo rectángulo, uno de los ángulos siempre es 90° o pi/2 rad
+
+```
+
+calculo de razones trigonometricas para α
+```{r}
+# Seno, coseno y tangente de α
+seno_alpha <- a / c
+coseno_alpha <- b / c
+tangente_alpha <- a / b
+
+# Mostramos los resultados
+cat("Seno de α =", seno_alpha, "\n")
+cat("Coseno de α =", coseno_alpha, "\n")
+cat("Tangente de α =", tangente_alpha, "\n")
+
+```
+
+       C
+       |\
+     a | \ c
+       |  \
+       |   \
+       |    \
+       |     \
+       |______\
+       A   b   B
+
+
+
+
+
