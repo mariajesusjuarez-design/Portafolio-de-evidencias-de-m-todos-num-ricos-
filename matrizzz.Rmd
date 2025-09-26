@@ -1,0 +1,68 @@
+---
+title: "clase 10 de septiembre"
+author: "maria de jesus juarez martinez"
+output: html_document
+date: "2025-09-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```{r}
+discriminante <- function(a, b, c) {
+  soluciones <- b^2 - 4*a*c
+  if (soluciones < 0) {
+    resp <- "No hay solución"
+  } else {
+    resp <- "Sí hay solución"
+  }
+  return(list(respuesta = resp, valor = soluciones))
+}
+intento1 <- discriminante(5, 2, 3)
+intento1
+```
+
+#---matriz---
+```{r}
+# Vectores para la matriz
+valores <- c(15, 13, 8, 3, 27, -4, -2, 10, 11)
+A <- matrix(valores, nrow = 3, byrow = TRUE)
+
+# Transpuesta
+tA <- t(A)
+
+valores2 <- c(15, 3, -2, 13, 27, 10, 8, -4, 11)
+A2 <- matrix(valores2, nrow = 3, byrow = TRUE)
+
+# Vector columna b
+b <- matrix(c(-3, 2, -1), nrow = 3)
+
+# Matrices aumentadas
+Ab <- cbind(A, b)
+bA <- cbind(b, A)
+abt <- rbind(A, t(b))
+btA <- rbind(t(b), A)
+
+r1<-Ab[1,]
+r2<-Ab[2,]
+r3<-Ab[3,]
+c1<-Ab[,1]
+c2<-Ab[,2]
+c3<-Ab[,3]
+a11<-Ab[1,1]
+a22<-Ab[2,2]
+a32<-Ab[3,2]
+a23<-Ab[2,3]
+a14<-Ab[1,4]
+a24<-Ab[2,4]
+m1=-Ab[2,1]/Ab[1,1]
+m2<- -Ab[3,1]/Ab[1,1]
+A1<-Ab[1,]
+A2<-m1*Ab[1,]+Ab[2,]
+A3<-m2*Ab[1,]+Ab[3,]
+m3<-(-Ab)[3,2]/Ab[2,2]
+A3<-m3*Ab[2,]+Ab[3,]
+
+# Mostramos resultados
+A; tA; A2; b; Ab; bA; abt; btA
+```
